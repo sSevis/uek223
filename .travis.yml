@@ -10,3 +10,8 @@ addons:
   sonarcloud:
     organization: $SONAR_USER
     token: $SONAR_TOKEN
+jobs:
+  include:
+    - stage: continousIntegration
+      script: ./gradlew sonarqube
+
