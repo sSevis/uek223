@@ -74,7 +74,7 @@ public class UserIntegrationTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.firstName").value(userDTOToBeTestedAgainst.getFirstName()))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.surname").value(userDTOToBeTestedAgainst.getSurname()))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.email").value(userDTOToBeTestedAgainst.getEmail()));
-        
+
                 //.andExpect(MockMvcResultMatchers.jsonPath("$.roles[*]").value(userDTOToBeTestedAgainst.getRoleDTOAdmin().toArray()))    //.value(Matchers.containsInAnyOrder(userDTOToBeTestedAgainst.getRoleDTOAdmin().stream().map(RoleDTOAdmin::getName).toArray())))
                 //.andExpect(MockMvcResultMatchers.jsonPath("$.roles[*].authorities[*]").value(Matchers.containsInAnyOrder(userDTOToBeTestedAgainst.getRoleDTOAdmin().stream().map(RoleDTOAdmin::getAuthorities).flatMap(Collection::stream).map(AuthorityDTOAdmin::getName).toArray())));
     }
